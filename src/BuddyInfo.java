@@ -2,6 +2,12 @@
 public class BuddyInfo {
 	private String name, phone, address;
 	
+	public BuddyInfo(String name, String address, String phone) {
+		this.name = name;
+		this.address = address;
+		this.phone = phone;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -27,7 +33,7 @@ public class BuddyInfo {
 	}
 
 	public static void main(String[] args) {
-		BuddyInfo b = new BuddyInfo();
+		BuddyInfo b = new BuddyInfo("Homer", "Carleton", "1234");
 		System.out.println("Hello " + b.getName());
 	}
 
