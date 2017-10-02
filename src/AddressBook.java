@@ -7,8 +7,8 @@ public class AddressBook {
 		addressbook = new ArrayList<BuddyInfo>();
 	}
 	
-	public void removeBuddy(int index) {
-		addressbook.remove(index);
+	public BuddyInfo removeBuddy(int index) {
+		return this.addressbook.remove(index);
 	}
 	
 	public void addBuddy(BuddyInfo buddyinfo) {
@@ -16,7 +16,10 @@ public class AddressBook {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("AddressBook");
+		BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "1234");
+		AddressBook addressBook = new AddressBook();
+		addressBook.addBuddy(buddy);
+		addressBook.removeBuddy(0);
 	}
 
 }
